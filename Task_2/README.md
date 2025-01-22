@@ -31,7 +31,6 @@ The solution ensures **redundancy**, **self-restoration**, and **proper initiali
 
 ### **Bonus Features**
 - **Monitoring:** Optional integration with Prometheus and Grafana for real-time metrics.  
-- **Wait-for-Script:** Ensures proper initialization sequencing (DB → Nginx → Django).  
 
 ---
 
@@ -74,15 +73,15 @@ graph TD;
 ### **Step-by-Step Deployment**
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/your-repo/devops-deployment-task.git
-   cd devops-deployment-task
+   git clone https://github.com/aqilshaikh/Docker_WebServer_And_Security_Scanning.git
+   cd Docker_WebServer_And_Security_Scanning
    ```
 
 2. **Run Deployment Script**  
    Execute the setup script to install Docker, deploy the containers, and initiate the services:  
    ```bash
-   chmod +x deploy.sh
-   ./deploy.sh
+   chmod +x setup.sh
+   ./setup.sh
    ```
 
 3. **Verify the Deployment**  
@@ -93,11 +92,6 @@ graph TD;
      ```  
 
 4. **Run Security Scans**  
-   Display vulnerability reports:  
-   ```bash
-   chmod +x run_scans.sh
-   ./run_scans.sh
-   ```
 
 ---
 
