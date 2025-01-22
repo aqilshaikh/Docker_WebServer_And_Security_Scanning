@@ -47,16 +47,12 @@ graph TD;
 ## **File Structure**
 ```plaintext
 .
-├── docker-compose.yml         # Main YAML file for deployment
 ├── deployment.yaml            # Deployment process definition
 ├── start.yaml                 # Startup behavior definition
-├── Dockerfile                 # Dockerfile for Django container
+├── setup.sh                   # Bash script to deploy the setup
 ├── nginx.conf                 # Nginx configuration file
-├── app/                       # Django application directory
-│   ├── manage.py
-│   ├── settings.py
-│   ├── ...
-├── wait-for-it.sh             # Script for dependency readiness
+├── prometheus.yml             
+├── monitoring-compose.yml     # Deployment of monitoring tool
 └── README.md                  # You're here!
 ```
 
