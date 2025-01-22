@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: appuser
+      POSTGRES_PASSWORD: strngpswrd
+      POSTGRES_DB: appdb
+    volumes:
+      - /mnt/db_data:/var/lib/postgresql/data
+    restart: always
+    
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+    restart: always
+    
+  django:
+    image: django:latest
+    environment:
+      DATABASE_URL: postgres://appuser:strngpswrd@db:5432/appdb
+    depends_on:
+      - nginx
+    command: python manage.py runserver 0.0.0.0:8000  # Skip migrations
+    restart: on-failure
+
+
