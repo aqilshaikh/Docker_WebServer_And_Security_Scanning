@@ -100,7 +100,7 @@ For detailed architecture, refer to the diagrams included in individual task fol
 
 1. Clone the repository:
    ```bash
-   git clone (https://github.com/aqilshaikh/Docker_WebServer_And_Security_Scanning.git)
+   git clone https://github.com/aqilshaikh/Docker_WebServer_And_Security_Scanning.git
    ```
 2. Navigate to the desired task folder:
    ```bash
